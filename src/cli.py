@@ -7,6 +7,7 @@ from src.commands.import_cmd import import_data
 from src.commands.query_cmd import query
 from src.commands.report_cmd import report
 from src.commands.stats_cmd import stats
+from src.commands.template_cmd import template
 
 
 @click.group(help="非遗项目普查数据处理器")
@@ -15,6 +16,7 @@ def cli() -> None:
 
 
 cli.add_command(import_data, "import")
+cli.add_command(template)
 cli.add_command(clean)
 cli.add_command(stats)
 cli.add_command(report)
